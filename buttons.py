@@ -1,5 +1,6 @@
 from telebot import types
 
+
 def phone_button():
     kb = types.ReplyKeyboardMarkup(resize_keyboard=True)
     button = types.KeyboardButton("Поделиться контактом!", request_contact=True)
@@ -8,5 +9,11 @@ def phone_button():
 def location_button():
     kb = types.ReplyKeyboardMarkup(resize_keyboard=True)
     button = types.KeyboardButton("Поделиться локацией!", request_location=True)
+    kb.add(button)
+    return kb
+
+def translate():
+    kb = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    button = types.KeyboardButton("Переводчик")
     kb.add(button)
     return kb

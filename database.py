@@ -11,7 +11,7 @@ connection.commit()
 def add_user(name,user_id, phone_number):
     connection = sqlite3.connect("my_bot.db")
     sql = connection.cursor()
-    sql.execute("INSERT INTO users (name, user_ud, phone_number) "
+    sql.execute("INSERT INTO users (name, user_id, phone_number) "
                 "VALUES (?, ?, ?);", (name, user_id, phone_number))
     connection.commit()
 
